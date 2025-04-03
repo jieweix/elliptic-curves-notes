@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.16)  10 JAN 2025 12:13
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.16)  3 APR 2025 15:03
  system commands enabled.
 **notes.tex
 (./notes.tex
@@ -4586,12 +4586,12 @@ Package rerunfilecheck Info: File `notes.out' has not changed.
 
 Here is how much of LuaTeX's memory you used:
  50698 strings out of 476381
- 745954,4101490 words of node,token memory allocated
+ 745944,4101490 words of node,token memory allocated
  1834 words of node memory still in use:
    9 hlist, 2 vlist, 3 rule, 1 local_par, 8 glue, 7 kern, 1 penalty, 3 sub_mlist
 , 1 margin_kern, 4 glyph, 395 attribute, 61 glue_spec, 200 attribute_list, 2 wri
 te nodes
-   avail lists: 1:6,2:111817,3:37567,4:1994,5:2630,6:140,7:42035,8:95,9:6275,10:
+   avail lists: 1:5,2:111817,3:37567,4:1994,5:2629,6:141,7:42035,8:95,9:6275,10:
 41,11:503,12:1
  71076 multiletter control sequences out of 65536+600000
  267 fonts using 21104631 bytes
@@ -4613,7 +4613,7 @@ exmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2024/texmf-di
 st/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2024/texmf-dist/fonts/
 type1/public/newpx/zplb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/newpx/zplr.pfb>
-Output written on notes.pdf (40 pages, 1686717 bytes).
+Output written on notes.pdf (40 pages, 1686666 bytes).
 
 PDF statistics: 694 PDF objects out of 1000 (max. 8388607)
  620 compressed objects within 7 object streams
