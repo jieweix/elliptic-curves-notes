@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[british]{babel}
 \usepackage{amsthm}
@@ -16,10 +17,13 @@
 \usepackage{float}
 \usepackage{tikz}
 \usepackage{pst-plot}
-\usepackage{newpx}
 \usepackage{ytableau}
 \usepackage{microtype}
 \usepackage{listings}
+\usepackage[math]{iwona}
+\usepackage{cmbright}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
 
@@ -110,7 +114,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \newtheorem*{notation}{Notation}
 
 \title{MATH70064 Elliptic curves :: Lecture notes}
-\author{Lecturer: Yankı Lekili}
+\author{Lecturer: Yanki Lekili}
 \date{Last edited: \today}
 
 \begin{document}
@@ -291,7 +295,7 @@ Recall the definition of a Cauchy sequence: $(x_n)_{n\geq 1}$ is Cauchy if $\for
 
 In the same spirit that Cauchy sequences complete $\Q$ to $\R$, $\Q$ is also $p$-adically incomplete. Construct a sequence $(x_n)$ of integers by $x_n^2+1\equiv 0\Mod 5^n$ and $x_{n+1}\equiv x_n\Mod 5^n$. Choose $x_1=2$ and suppose $x_n$ is constructed. By induction it suffices to show $x_{n+1}$ can be constructed to see this sequence is well-defined. Write $x_n^2+1=5^nc$ and $x_{n+1}=x_n+b5^n$ such that $(x_n+b5^n)^2+1\equiv 0\Mod 5^{n+1}$. Hence one needs to solve $2x_nb+c\equiv 0\Mod 5$, which is indeed solvable since $5\nmid x_n$.
 
-Now the limit $x$ must satisfies $x^n+1=0$, which doesn't have a rational solution. In this sense we give another definition of $p$-adic numbers:
+Now the limit $x$ must satisfy $x^n+1=0$, which doesn't have a rational solution. In this sense we give another definition of $p$-adic numbers:
 \begin{defn}
 $\Q_p$ is the completion of $\Q$ with respect to $|\cdot|_p$.
 \end{defn}
@@ -1074,7 +1078,7 @@ If $m\in\Z_{>0}$ satisfies $\exists t:t^2\equiv -1\Mod m$ (i.e. $-1$ is a quadra
 In particular, any prime $p\equiv 1\Mod 4$ is a sum of two squares.
 \end{thm}
 \begin{proof}
-Let $\Lambda=\{(x,y):y\equiv tx\Mod m\}$. To see this is a subgroup of $\Z^2$ of index $m$, note that it's precisely $\ker\varphi$ where $\varphi:\Z^2\rightarrow\Z/m:(x,y)\mapsto y-tx$. Let $C=\{(x,y)\in\R^2:x^2+y^2<2m\}$, a open ball and clearly convex and symmetric with $\vol(C)=2m\pi>2^2m$, so one has $0\neq (x,y)\in\Lambda \cap C$. In particular, $x^2+y^2<2m$ and $y\equiv tx\Mod m$, so
+Let $\Lambda=\{(x,y):y\equiv tx\Mod m\}$. To see this is a subgroup of $\Z^2$ of index $m$, note that it's precisely $\ker\varphi$ where $\varphi:\Z^2\rightarrow\Z/m:(x,y)\mapsto y-tx$. Let $C=\{(x,y)\in\R^2:x^2+y^2<2m\}$, an open ball and clearly convex and symmetric with $\vol(C)=2m\pi>2^2m$, so one has $0\neq (x,y)\in\Lambda \cap C$. In particular, $x^2+y^2<2m$ and $y\equiv tx\Mod m$, so
 \[
 x^2+y^2\equiv x^2+t^2x^2=(t^2+1)x^2\equiv 0\Mod m,
 \]
@@ -1156,7 +1160,7 @@ It suffices to show that with a line $\ell$ over $k$ not containing $O\in Q$, th
 \end{itemize}
 \end{proof}
 
-\section{Cubic curves}
+\section{Cubics}
 \begin{defn}
 A \textit{plane cubic} is an equation $F(X,Y,Z)=0$ where $F\in k[X,Y,Z]$ is homogeneous of degree 3.
 \end{defn}
@@ -1478,7 +1482,7 @@ Now consider the nontrivial intersections (i.e. excluding $P$) of the line $y=tx
 \textit{Week 6, lecture 2, 7th November}
 \end{flushright}
 
-The recording of the lecture failed, see pages 42--45 of Yankı's notes, specifically the last 3 examples.
+The recording of the lecture failed, see pages 42--45 of Yanki's notes, specifically the last 3 examples.
 
 \begin{flushright}
 \textit{Week 6, lecture 3, 8th November}
@@ -2099,7 +2103,7 @@ Let $E$ be an elliptic curve over $\Q$. Then there exists a unique function $\wi
 If we didn't define the canonical height function, these properties hold only up to some constants.
 \end{thm}
 
-See page 70 of Yankı's notes for a quadratic shaped table of $H(nP)$ which corresponds to property 2. To prove the theorem we need some lemmas.
+See page 70 of Yanki's notes for a quadratic shaped table of $H(nP)$ which corresponds to property 2. To prove the theorem we need some lemmas.
 
 \begin{lemma}
 There exists $C_0>0$ depending only on $E$ such that each $P\in E(\Q)$ satisfies $h(2P)\geq 4h(P)-C_0$.
