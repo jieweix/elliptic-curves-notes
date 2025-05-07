@@ -141,7 +141,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \subsection{Notation and basic definitions}
 $k$, field, e.g. $\Q, \R, \C, \F_p, \Q_p, \Q(i), \Q(\sqrt 3)$.
 
-$k[X,Y]$ or $k[X,Y,Z]$, polynomials. Degree 2 ones are \textit{conics} (usually denoted $Q$), degree 3 are \textit{cubics}.
+$k[x,y]$ or $k[x,y,z]$, polynomials. Degree 2 ones are \textit{conics} (usually denoted $Q$), degree 3 are \textit{cubics}.
 
 An \textit{elliptic curve} $E: y^2+a_1xy+a_3y=x^3+a_2x^2+a_4x+a_6$ where $a_1,a_2,a_3,a_4,a_6\in k$. If $\Char k\neq 2$ or 3 then it can be written as $y^2=x^3+ax+b$ by change of variables where $a,b\in k$ and $\Delta=4a^3+27b^2\neq 0$.
 
@@ -380,12 +380,12 @@ Note that $\frac1p\notin\Z_p$ since $\left|\frac1p\right|_p=p>1$, and in fact $\
 
 \subsection{Series expansion on $\Q_p$}
 \begin{defn}
-We define a \textit{series} $\sum_{n=0^\infty}\beta_n\in\Q_p$ in the usual way as $\lim_{N\rightarrow\infty}\sum_{n=0^N}\beta_n$.
+We define a \textit{series} $\sum_{n=0}^\infty\beta_n\in\Q_p$ in the usual way as $\lim_{N\rightarrow\infty}\sum_{n=0}^N\beta_n$.
 \end{defn}
 \begin{lemma}
 $\sum_{n=0}^\infty\beta_n$ converges $\iff\beta_n\rightarrow 0$.
 \end{lemma}
-A well known counterexample in the usual norm is the harmonic series.
+A well-known counterexample in the usual norm is the harmonic series.
 \begin{proof}
 $\implies$ is obvious by what we've seen in real analysis. Now suppose $\beta_n\rightarrow 0$ and $M<N$, then by induction on the ultrametric inequality
 \[
@@ -518,7 +518,7 @@ Now
 \]
 and
 \[
-|f'(x_1)|_7=\frac{15}{2}=0,
+|f'(x_1)|_7=\left|\frac{15}{2}\right|_7=0,
 \]
 both verifying the lemma. One can proceed to obtain a solution in $\Q_7$. Now one may not be satisfied with something like $\frac{15}{4}$, which still looks like a regular rational number instead of a $p$-adic number, so one can write it as
 \[
@@ -1241,9 +1241,9 @@ If $a=2$, the only exceptional points of $E$ are $[1,-1,0]$ and $[1,1,1]$.
 In particular, any other rational point can be used to find infinitely many rational solutions.
 \end{prop}
 \begin{proof}
-By \ref{prop:flexHessian}, all these points except $[1:1:1]$ are (the only) flex points of $E$. Hence they are exceptional, since the tangent line by definition already intersects with the curve with multiplicity at least 3, so they cannot generate any new point by \ref{thm:Bezout}.
+By \ref{prop:flexHessian}, all these points except $[1,1,1]$ are (the only) flex points of $E$. Hence they are exceptional, since the tangent line by definition already intersects with the curve with multiplicity at least 3, so they cannot generate any new point by \ref{thm:Bezout}.
 
-The point $[1:1:1]$ on $X^3+Y^3=2Z^3$ is not flex. But its tangent line $X+Y=2Z$ intersects with the curve at $[1,-1,0]$, which is flex.
+The point $[1,1,1]$ on $X^3+Y^3=2Z^3$ is not flex. But its tangent line $X+Y=2Z$ intersects with the curve at $[1,-1,0]$, which is flex.
 
 Now fix $a\geq 1$ and suppose $\mathbf{x_0}=[x_0,y_0,z_0]\in E$ is an arbitrary other rational point. The tangent line is $\ell_{\mathbf{x_0}}=x_0^2+y_0^2Y-az_0^2Z=0$, which by above intersects $E$ at another point which we claim to be
 \[
@@ -1264,7 +1264,7 @@ which is true since the only case that $|x_0^3-y_0^3|\leq 3$ is that $x_0,y_0\in
 
 \subsection{Group law}
 \begin{lemma}[Cayley--Bacharach]
-Given 8 points in general position (in particular no 4 are colinear and no 7 lie on the same conic), $\exists$ a 9th point such that any cubic passing through the 8 points must also passes through the 9th.
+Given 8 points in general position (in particular no 4 are collinear and no 7 lie on the same conic), $\exists$ a 9th point such that any cubic passing through the 8 points must also passes through the 9th.
 \end{lemma}
 
 \begin{minipage}{0.4\textwidth}
@@ -1386,7 +1386,7 @@ The main goals of the remaining of the course are: given $E$ irreducible, prove
 
 \begin{lemma}
 \label{lemma:condPQRcol}
-If $O$ is flex, then $P+Q+R=O\iff P,Q,R$ are colinear.
+If $O$ is flex, then $P+Q+R=O\iff P,Q,R$ are collinear.
 \end{lemma}
 \begin{proof}
 $P+Q+R=O\iff R=-(P+Q)\iff R$ is the third point of intersection of $\overrightarrow{PQ}$ with the curve.
@@ -1583,7 +1583,7 @@ y^2=\left(\frac{1}{9}\right)^3-18=\frac{1-18\times 27^2}{27^2}
 \]
 has a root by Hensel's, so $y=\frac{1}{27}u$ for some $u\in\Z_3$, then
 \[
-[x:y:1]=[27x:27y:27]=[3:u:27]\text{ which is reduced to }[0,\overline u,0]=[0,1,0]=O.
+[x,y,1]=[27x,27y,27]=[3,u,27]\text{ which is reduced to }[0,\overline u,0]=[0,1,0]=O.
 \]
 \end{example}
 
@@ -1917,7 +1917,7 @@ In this example, it turns out that $E(\Q)=\{O,(0,0),(1,0),(-1,0)\}=V_4$ (so $2E(
 \textit{Week 8, lecture 3, 22nd November}
 \end{flushright}
 
-\begin{thm}
+\begin{thm}[2-descent homomorphism]
 \label{thm:deltahom}
 Let $K$ be a field with $\Char K\neq 2$ and $E:y^2=(x-e_1)(x-e_2)(x-e_3)$ with $e_1,e_2,e_3\in K$ distinct. Define
 \[
@@ -1975,7 +1975,7 @@ Suppose it's established that $\delta$ is a group homomorphism. Then $\delta(2P)
 
 It remains to show for $P_1+P_2+P_3=O$ one has $\delta(P_1)\delta(P_2)\delta(P_3)=(1,1,1)$. First note that $\delta(P)=\delta(-P)$ since the definition of $\delta$ only uses $x$. If $P_1=P_2=P_3=O$ then there's nothing to prove. If $P_1=O$, then $P_2+P_3=O$ (i.e. $P_3=-P_2$), so $\delta(P_1)\delta(P_2)\delta(P_3)=(1,1,1)\delta(P_2)^2=(1,1,1)$.
 
-Now suppose none of $P_i$'s is $O$ and write $P_i=(x_i,y_i)$. Suppose $x_i\neq e_i,\ y_i\neq 0 \ \forall i$, i.e. $P_i$'s are not 2-torsion. By \ref{lemma:condPQRcol}, $P_i$'s are colinear, so let $y=mx+c$ be the line through them. Then the degree 3 monic polynomial $F(x)=(x-e_1)(x-e_2)(x-e_3)-(mx+c)^2$ has roots $x_1,x_2,x_3$, so $F(x)=(x-x_1)(x-x_2)(x-x_3)$. For $i=1,2,3$, setting $x=e_i$ one has $(e_i-x_1)(e_i-x_2)(e_i-x_3)=-(me_i+c)^2\in (K^\times)^2$. But $(e_i-x_1)(e_i-x_2)(e_i-x_3)$ are precisely (up to signs) the $i$th coordinate of $\delta(P_1)\delta(P_2)\delta(P_3)$.
+Now suppose none of $P_i$'s is $O$ and write $P_i=(x_i,y_i)$. Suppose $x_i\neq e_i,\ y_i\neq 0 \ \forall i$, i.e. $P_i$'s are not 2-torsion. By \ref{lemma:condPQRcol}, $P_i$'s are collinear, so let $y=mx+c$ be the line through them. Then the degree 3 monic polynomial $F(x)=(x-e_1)(x-e_2)(x-e_3)-(mx+c)^2$ has roots $x_1,x_2,x_3$, so $F(x)=(x-x_1)(x-x_2)(x-x_3)$. For $i=1,2,3$, setting $x=e_i$ one has $(e_i-x_1)(e_i-x_2)(e_i-x_3)=-(me_i+c)^2\in (K^\times)^2$. But $(e_i-x_1)(e_i-x_2)(e_i-x_3)$ are precisely (up to signs) the $i$th coordinate of $\delta(P_1)\delta(P_2)\delta(P_3)$.
 
 If $2P_1=O$ and $2P_2,2P_3\neq O$, then by the same process one can deduce the 2nd and 3rd coordinate are 1, but then the 1st coordinate must be 1 as well. Finally, if $2P_1=2P_2=O$ then $2P_3=-2P_1-2P_2-O$ so all three are 2-torsion, then use the explicit formula to verify.
 \end{proof}
@@ -2035,7 +2035,7 @@ Recall that before the proof of Mordell--Weil, we look at for $E:y^2=x^3-x$ one 
 \end{example}
 
 \begin{example}
-$E:y^2=(x-5)(x-6)(x-11)$. This is in Weierstrass form since the roots sum to 0. Now $(e_1-e_2)(e_1-e_3)(e_2-e_3)=2^4\times 17$. The torsion part is easy: $p=3\nmid 2^4\times 17$, so $E(\Q)_{\operatorname{tor}}$ injects into $E(\F_3)=\{O,(0,0),(1,0),(-1,0)\}$, but we already know three 2-torsion points in $E(\Q)$ from the roots of the RHS, so $E(\Q)=\Z/2\Z\times\Z/2\Z$.
+$E:y^2=(x-5)(x-6)(x+11)$. This is in Weierstrass form since the roots sum to 0. Now $(e_1-e_2)(e_1-e_3)(e_2-e_3)=2^4\times 17$. The torsion part is easy: $p=3\nmid 2^4\times 17$, so $E(\Q)_{\operatorname{tors}}$ injects into $E(\F_3)=\{O,(0,0),(1,0),(-1,0)\}$, but we already know three 2-torsion points in $E(\Q)$ from the roots of the RHS, so $E(\Q)_{\operatorname{tors}}=\Z/2\Z\times\Z/2\Z$.
 
 Since $a,b$ determine $c$, consider $\delta$ as a function to $\left(\Q^\times/\left(\Q^\times\right)^2\right)^2$. Then $\im\delta$ consists of $(a,b)$ such that
 \[
